@@ -1,3 +1,12 @@
+**Credentials to be entered while logging :**
+**email": "test@yopmail.com",
+password: "123456",
+phone :965**
+
+
+
+
+
 # Myapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.15.
