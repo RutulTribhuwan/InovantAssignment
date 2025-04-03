@@ -1,0 +1,154 @@
+<div class="container-fluid">
+    <!-- Navbar for My Account -->
+    <nav class="navbar navbar-light my-navbar d-flex justify-content-center">
+      <div class="text-center position-relative w-100">
+       
+        <h1 class="my-account-title">
+          <span class="green-half">My</span> Account
+        </h1>
+  
+        <!-- Subtitle -->
+        <p class="subtitle">Manage Your Fun: View tickets, Book Zones, and Track Your Adventure!</p>
+  
+        
+        <div class="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="row">
+      <!-- Left Sidebar Dashboard -->
+      <div class="col-md-3">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">Dashboard</h5>
+  
+            <!-- Edit Profile -->
+            <div class="row mb-3">
+              <div class="col-md-2">
+                <i class="fas fa-user-edit" style="font-size: 24px;"></i>
+              </div>
+              <div class="col-md-10">
+                <a href="#" (click)="editProfile()" class="text-decoration-none">Edit Profile</a>
+              </div>
+            </div>
+  
+            <!-- FAQs -->
+            <div class="row mb-3">
+              <div class="col-md-2">
+                <i class="fas fa-question-circle" style="font-size: 24px;"></i>
+              </div>
+              <div class="col-md-10">
+                <a href="#" (click)="openFAQ()" class="text-decoration-none">FAQs</a>
+              </div>
+            </div>
+  
+            <!-- Delete Account -->
+            <div class="row mb-3">
+              <div class="col-md-2">
+                <i class="fas fa-trash-alt" style="font-size: 24px;"></i>
+              </div>
+              <div class="col-md-10">
+                <a href="#" (click)="deleteAccount()" class="text-decoration-none text-danger">Delete Account</a>
+              </div>
+            </div>
+  
+            <!-- Logout Dashboard -->
+            <div class="row mb-3">
+              <div class="col-md-2">
+                <i class="fas fa-sign-out-alt" style="font-size: 24px; color: red;"></i>
+              </div>
+              <div class="col-md-10">
+                <a href="#" (click)="logout()" class="text-decoration-none text-danger">Logout</a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Content Area (Personal Information) -->
+      <div class="col-md-9">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2>Personal Information</h2>
+  
+            <!-- User Icon and Info Display -->
+            <div class="row mb-3 align-items-center" style="height: 70px;">
+              <div class="col-md-1" style="display: flex; justify-content: center; align-items: center;">
+                <i class="fas fa-user-circle" style="font-size: 40px;"></i>
+              </div>
+              <div class="col-md-11" style="font-size: 18px;">
+                <span><strong>{{ userData?.first_name }} {{ userData?.last_name }}</strong></span><br>
+                <span>{{ userData?.email }}</span>
+              </div>
+            </div>
+  
+            <div class="mb-2"></div>
+  
+            <!-- User Information -->
+            <div class="row mb-3">
+              <div class="col-md-4"><strong>First Name:</strong></div>
+              <div class="col-md-8"><span>{{ userData?.first_name }}</span></div>
+            </div>
+  
+            <div class="row mb-3">
+              <div class="col-md-4"><strong>Last Name:</strong></div>
+              <div class="col-md-8"><span>{{ userData?.last_name }}</span></div>
+            </div>
+  
+            <div class="row mb-3">
+              <div class="col-md-4"><strong>Email:</strong></div>
+              <div class="col-md-8"><span>{{ userData?.email }}</span></div>
+            </div>
+  
+            <div class="row mb-3">
+              <div class="col-md-4"><strong>Phone:</strong></div>
+              <div class="col-md-8"><span>{{ userData?.phone_code }}{{ userData?.phone }}</span></div>
+            </div>
+<div class="row mb-3">
+    <div class="col-md-4"><strong>Old Password:</strong></div>
+    <div class="col-md-8">
+      <input type="password" class="form-control" placeholder="Enter your old password">
+    </div>
+  </div>
+  
+  <div class="row mb-3">
+    <div class="col-md-4"><strong>New Password:</strong></div>
+    <div class="col-md-8">
+      <input type="password" class="form-control" placeholder="Enter your new password">
+    </div>
+  </div>
+  
+  <div class="row mb-3">
+    <div class="col-md-4"><strong>Confirm Password:</strong></div>
+    <div class="col-md-8">
+      <input type="password" class="form-control" placeholder="Enter your new password">
+    </div>
+  </div>
+  
+            <!-- Save Button  -->
+            <div class="text-center mt-4">
+              <button class="btn btn-primary" (click)="saveProfile()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--  Footer -->
+    <nav class="navbar navbar-light footer-navbar">
+        <div class="container-fluid text-center">
+          <h6 class="mb-2">Quick Links</h6>
+          <p>Press</p>
+          <p>FAQs</p>
+          <p>Contact Us</p>
+          <p>About Us</p>
+          <p>Join the Team</p>
+          <p>Terms & Conditions</p>
+        </div>
+      </nav>
+      
+      
+      

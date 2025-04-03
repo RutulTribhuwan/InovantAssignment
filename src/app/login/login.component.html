@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-box">
+      <h1 class="logo">K-Land</h1>
+      <h2>ENTER YOUR EMAIL TO CONTINUE</h2>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <input type="email" formControlName="email" placeholder="Email" required />
+          <input type="password" formControlName="password" placeholder="Password" required />
+          <input type="text" formControlName="phoneCode" placeholder="Phone Code" required />
+        
+        </div>
+        <div class="form-actions">
+          <a href="#" class="forgot-password">Forgot password?</a>
+          <button type="submit" [disabled]="loginForm.invalid">Login</button>
+        </div>
+      </form>
+  
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      <p>Don't have an account? <a href="#">Create Account</a></p>
+    </div>
+  </div>
+  
